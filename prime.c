@@ -3,7 +3,7 @@
 
 int Isprime(int n)
 {
-	
+	//printf("%d",n);
 	if(n==1)
           return 0;
 	if(n==2 || n==3)
@@ -11,9 +11,10 @@ int Isprime(int n)
 	if(n%2==0)
 		return 0;
 	
-	for(int m=3;m*m<=n;m+=2)
+	for(int m=3;m<=n;++m)
 	{
-		if(n%m==0);
+		//printf("in loop \n");
+		if(n%m==0)
 		return 0;
 	}
 	return 1;
@@ -23,6 +24,7 @@ int Isprime(int n)
 	int term,count=0;
 	for(term=L;term<U;++term)
 	{
+		//printf("in count prim for loop");
 
 		count = count + Isprime(term);
 	
